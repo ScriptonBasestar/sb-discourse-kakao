@@ -9,7 +9,7 @@ plugins:
     default: ""
     secret: true
   login_with_kakao_scope:
-    default: "profile"
+    default: "profile,account_email"
   login_with_kakao_overrides_email:
     default: false
   login_with_kakao_email_verified:
