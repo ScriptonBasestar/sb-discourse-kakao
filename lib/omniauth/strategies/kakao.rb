@@ -23,9 +23,13 @@ module OmniAuth
              authorize_url: AUTHORIZE_URL,
              token_url: AUTHORIZE_TOKEN_URL
 
-      uid { raw_info["id"].to_s }
+      uid {
+        OmniAuth.logger.send :debug, "uid >>>>>>>>>>"
+        raw_info["id"].to_s
+      }
 
       info do
+        OmniAuth.logger.send :debug, "info >>>>>>>>>>"
         hash = {
           name: raw_info["properties"]["nickname"],
           username: raw_info["kakao_account"]["email"],
@@ -34,10 +38,11 @@ module OmniAuth
         if raw_info["kakao_account"]["has_email"] && raw_info["kakao_account"]["is_email_verified"] && raw_info["kakao_account"]["is_email_valid"]
           hash[:email] = raw_info["kakao_account"]["email"]
         end
-        raw_info
+        hash
       end
 
       extra do
+        OmniAuth.logger.send :debug, "extra >>>>>>>>>>"
         { raw_info: raw_info }
       end
 
