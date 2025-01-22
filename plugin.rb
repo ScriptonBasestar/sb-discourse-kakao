@@ -10,6 +10,7 @@
 enabled_site_setting :enable_login_with_kakao
 
 # gem "sb-omniauth-kakao", "0.3.0", source: "https://rubygems.pkg.github.com/scriptonbasestar"
+# gem "sb-omniauth-kakao", "0.3.1"
 gem "sb-omniauth-kakao"
 
 
