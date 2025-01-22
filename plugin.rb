@@ -9,7 +9,7 @@
 
 enabled_site_setting :enable_login_with_kakao
 
-gem "sb-omniauth-kakao", source: "https://github.com/ScriptonBasestar/sb-omniauth-kakao.git"
+gem "sb-omniauth-kakao", "0.3.0", source: "https://rubygems.pkg.github.com/scriptonbasestar"
 
 
 register_svg_icon "fab-kakao"
