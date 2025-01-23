@@ -20,6 +20,11 @@ class Auth::LoginWithKakaoAuthenticator < ::Auth::ManagedAuthenticator
                             :client_secret
                           ] = SiteSetting.login_with_kakao_client_secret
                           strategy.options[:scope] = SiteSetting.login_with_kakao_scope
+                          if SiteSetting.login_with_kakao_redirect_url.present?
+                            strategy.options[:redirect_url] = SiteSetting.login_with_kakao_redirect_url
+                          else
+                            strategy.options[:callback_path] = SiteSetting.login_with_kakao_redirect_path
+                          end
                         }
   end
 

@@ -9,7 +9,15 @@ plugins:
     default: ""
     secret: true
   login_with_kakao_scope:
-    default: "profile,account_email"
+    default: "profile_nickname,profile_image"
+    description: "account_email은 비지니스 인증 필요"
+  login_with_kakao_redirect_url:
+    default: ""
+    description: "If redirect_url is specified, redirect_path_or_url will be ignored."
+    # client: true
+  login_with_kakao_redirect_path:
+    default: "/auth/kakao/callback"
+    # client: true
   login_with_kakao_overrides_email:
     default: false
   login_with_kakao_email_verified:
