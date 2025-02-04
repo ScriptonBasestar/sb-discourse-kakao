@@ -12,8 +12,8 @@ enabled_site_setting :enable_login_with_kakao
 # gem "sb-omniauth-kakao", "0.3.0", source: "https://rubygems.pkg.github.com/scriptonbasestar"
 gem "sb-omniauth-kakao", "0.3.2"
 
-
-register_svg_icon "fab-kakao"
+# register_asset "stylesheets/discourse-custom-oauth-icons.scss"
+register_svg_icon "kakao"
 
 require "sb-omniauth-kakao"
 # require_relative "lib/omniauth/strategies/kakao"
@@ -21,4 +21,4 @@ require "sb-omniauth-kakao"
 require_relative "lib/auth/login_with_kakao_authenticator"
 require_relative "lib/validators/enable_login_with_kakao_validator"
 
-auth_provider authenticator: Auth::LoginWithKakaoAuthenticator.new, icon: "fab-kakao"
+auth_provider authenticator: Auth::LoginWithKakaoAuthenticator.new, icon: "kakao"
