@@ -9,17 +9,20 @@ plugins:
     default: ""
     secret: true
   login_with_kakao_scope:
-    default: "profile_nickname,profile_image"
-    description: "account_email은 비지니스 인증 필요"
+    default: "profile_nickname,profile_image,account_email"
+    description: "카카오 OAuth2 스코프 설정 - account_email은 비즈니스 앱 승인 필요"
   login_with_kakao_redirect_url:
     default: ""
-    description: "If redirect_url is specified, redirect_path_or_url will be ignored."
+    description: "카카오 OAuth 리디렉션 URL (설정 시 redirect_path보다 우선 적용)"
     # client: true
   login_with_kakao_redirect_path:
     default: "/auth/kakao/callback"
+    description: "카카오 OAuth 콜백 경로"
     # client: true
   login_with_kakao_overrides_email:
     default: false
+    description: "카카오에서 받은 이메일로 기존 사용자 이메일 덮어쓰기"
   login_with_kakao_email_verified:
     hidden: true
     default: true
+    description: "카카오에서 제공하는 이메일을 검증된 것으로 처리"

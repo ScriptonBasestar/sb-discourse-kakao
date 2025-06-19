@@ -5,3 +5,16 @@
 # https://translate.discourse.org/
 
 ko:
+  site_settings:
+    enable_login_with_kakao: "카카오 로그인 인증을 활성화합니다. `login with kakao client id`와 `login with kakao client secret` 설정이 필요합니다."
+    login_with_kakao_client_id: "카카오 로그인 클라이언트 ID"
+    login_with_kakao_client_secret: "카카오 로그인 클라이언트 시크릿"
+    login_with_kakao_scope: "카카오 로그인 OAuth2 스코프 (공백으로 구분)"
+    login_with_kakao_overrides_email: "Discourse 사용자 계정의 이메일 주소를 덮어씁니다."
+    login_with_kakao_redirect_url: "카카오 로그인 리디렉션 URL (설정 시 리디렉션 경로는 무시됩니다)"
+    login_with_kakao_redirect_path: "카카오 로그인 리디렉션 경로"
+    login_with_kakao_email_verified: "카카오 로그인 이메일 검증 상태"
+
+    errors:
+      login_with_kakao_client_id_is_blank: "이 설정을 활성화하기 전에 '카카오 로그인 클라이언트 ID'를 설정해야 합니다."
+      login_with_kakao_client_secret_is_blank: "이 설정을 활성화하기 전에 '카카오 로그인 클라이언트 시크릿'을 설정해야 합니다."
