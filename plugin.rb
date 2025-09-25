@@ -7,6 +7,9 @@
 # authors: archmagece
 # url: https://github.com/scriptonbasestar/sb-discourse-kakao
 
+# Load validator before site settings are initialized
+require_relative "lib/validators/enable_login_with_kakao_validator"
+
 enabled_site_setting :enable_login_with_kakao
 
 gem "sb-omniauth-kakao", "0.3.5"
@@ -20,7 +23,6 @@ after_initialize do
   # require_relative "lib/omniauth/strategies/kakao"
 
   require_relative "lib/auth/login_with_kakao_authenticator"
-  require_relative "lib/validators/enable_login_with_kakao_validator"
 
   auth_provider authenticator: Auth::LoginWithKakaoAuthenticator.new, icon: "kakao"
 end
