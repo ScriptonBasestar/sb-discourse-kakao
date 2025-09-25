@@ -24,7 +24,7 @@ class Auth::LoginWithKakaoAuthenticator < ::Auth::ManagedAuthenticator
                           
                           # 리디렉션 URL 설정 - 카카오 개발자센터에서 설정한 URL과 일치해야 함
                           if SiteSetting.login_with_kakao_redirect_url.present?
-                            strategy.options[:redirect_uri] = SiteSetting.login_with_kakao_redirect_url
+                            strategy.options[:redirect_url] = SiteSetting.login_with_kakao_redirect_url
                           else
                             strategy.options[:callback_path] = SiteSetting.login_with_kakao_redirect_path
                           end
