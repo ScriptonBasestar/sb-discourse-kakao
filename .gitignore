@@ -1,2 +1,9 @@
-gems
-node_modules
+node_modules/
+tmp/
+!tmp/README.md
+gems/
+dump.rdb
+/auto_generated
+
+# IDE
+.idea/
